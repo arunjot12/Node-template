@@ -4,8 +4,13 @@ members = [
     "pallets/template",
      "pallets/crud",
      "pallets/cal",
-   #  "pallets/sender",
+     "pallets/xtokens",
+     "pallets/date",
+    #  "pallets/sender",
     "runtime",
 ]
 [profile.release]
 panic = "unwind"
+
+# [dependencies]
+# amiquip = "0.4.0"

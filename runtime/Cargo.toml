@@ -38,7 +38,7 @@ sp-session = { version = "4.0.0-dev", default-features = false, git = "https://g
 sp-std = { version = "4.0.0", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.32" }
 sp-transaction-pool = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.32" }
 sp-version = { version = "5.0.0", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.32" }
-
+amiquip = { version = "0.4.2", default-features = false, optional = true }
 # Used for the node template's RPCs
 frame-system-rpc-runtime-api = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.32" }
 pallet-transaction-payment-rpc-runtime-api = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.32" }
@@ -51,6 +51,7 @@ frame-system-benchmarking = { version = "4.0.0-dev", default-features = false, g
 pallet-template = { version = "4.0.0-dev", default-features = false, path = "../pallets/template" }
 crud = { default-features = false, path = "../pallets/crud" }
 cal = { default-features = false, path = "../pallets/cal" }
+#  sender = { default-features = false, path = "../pallets/sender" }
 
 
 [build-dependencies]
@@ -69,6 +70,7 @@ std = [
 	"frame-system-rpc-runtime-api/std",
 	"frame-system/std",
 	"frame-try-runtime/std",
+	"amiquip",
 	"pallet-aura/std",
 	"pallet-balances/std",
 	"pallet-grandpa/std",
@@ -78,6 +80,7 @@ std = [
 	"pallet-timestamp/std",
 	"pallet-transaction-payment-rpc-runtime-api/std",
 	"crud/std",
+	#  "sender/std",
 	"pallet-transaction-payment/std",
 	"sp-api/std",
 	"sp-block-builder/std",
